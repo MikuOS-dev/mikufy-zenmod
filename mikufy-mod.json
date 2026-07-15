@@ -1,0 +1,17 @@
+{
+  "3edc2a03-5ad9-4f0f-b282-6b670f039a8c": {
+    "id": "3edc2a03-5ad9-4f0f-b282-6b670f039a8c",
+    "name": "Mikufy",
+    "description": "Tema completo inspirado em Hatsune Miku para Zen Browser — UI, animações, glow/blur e boosts para 16 sites.",
+    "homepage": "https://github.com/MikuOS-dev/mikufy-zenmod",
+    "style": "https://raw.githubusercontent.com/MikuOS-dev/mikufy-zenmod/main/userChrome.css",
+    "readme": "https://raw.githubusercontent.com/MikuOS-dev/mikufy-zenmod/main/README.md",
+    "image": "https://raw.githubusercontent.com/MikuOS-dev/mikufy-zenmod/main/icons/screenshot.png",
+    "author": "MikuOS",
+    "version": "1.0.0",
+    "tags": ["theme", "miku", "anime", "glow", "blur"],
+    "createdAt": "2026-07-14",
+    "updatedAt": "2026-07-14",
+    "enabled": true
+  }
+}

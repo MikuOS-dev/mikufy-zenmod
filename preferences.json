@@ -1,0 +1,63 @@
+{
+  "mikufy.glow": {
+    "title": "Ativar efeito glow",
+    "description": "Ativa efeitos de brilho na barra lateral, abas e barra de URL",
+    "type": "boolean",
+    "default": true
+  },
+  "mikufy.blur": {
+    "title": "Ativar blur",
+    "description": "Ativa efeitos de backdrop blur no navegador",
+    "type": "boolean",
+    "default": true
+  },
+  "mikufy.animations": {
+    "title": "Animações",
+    "description": "Ativa ou desativa todas as animações do mod",
+    "type": "boolean",
+    "default": true
+  },
+  "mikufy.sidebar-transparency": {
+    "title": "Sidebar transparente",
+    "description": "Torna o fundo da barra lateral semi-transparente",
+    "type": "boolean",
+    "default": true
+  },
+  "mikufy.tab-hover-glow": {
+    "title": "Glow nos tabs",
+    "description": "Adiciona efeito de brilho ao passar o mouse sobre as abas",
+    "type": "boolean",
+    "default": false
+  },
+  "mikufy.urlbar-glow": {
+    "title": "Glow na URL bar",
+    "description": "Adiciona efeito de brilho na barra de URL ao focar",
+    "type": "boolean",
+    "default": true
+  },
+  "mikufy.color-primary": {
+    "title": "Cor primária",
+    "description": "Cor turquoise principal do Hatsune Miku",
+    "type": "string",
+    "default": "#39C5BB"
+  },
+  "mikufy.color-secondary": {
+    "title": "Cor secundária",
+    "description": "Cor de destaque rosa",
+    "type": "string",
+    "default": "#E83F6F"
+  },
+  "mikufy.scrollbar-style": {
+    "title": "Estilo da scrollbar",
+    "description": "Estilo da barra de rolagem do navegador",
+    "type": "string",
+    "options": ["default", "thin", "hidden"],
+    "default": "thin"
+  },
+  "mikufy.compact-tabs": {
+    "title": "Tabs compactas",
+    "description": "Reduz a altura das abas para um visual mais compacto",
+    "type": "boolean",
+    "default": false
+  }
+}

@@ -1,0 +1,911 @@
+/* ============================================================
+   Mikufy ZenMod - userContent.css
+   Website boosts and theming for specific sites
+   Primary: #39C5BB (Turquoise) | Secondary: #E83F6F (Pink)
+   ============================================================ */
+
+/* ============================================================
+   1. CSS VARIABLES
+   ============================================================ */
+:root {
+  --mikufy-primary: #39C5BB;
+  --mikufy-primary-rgb: 57, 197, 187;
+  --mikufy-secondary: #E83F6F;
+  --mikufy-secondary-rgb: 232, 63, 111;
+  --mikufy-dark: #0A1628;
+  --mikufy-glow-color: rgba(57, 197, 187, 0.4);
+}
+
+/* ============================================================
+   2. UNIVERSAL THEME
+   ============================================================ */
+
+/* Selection highlight */
+::selection {
+  background: var(--mikufy-primary) !important;
+  color: #fff !important;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--mikufy-primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* Scrollbar theming */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--mikufy-primary) transparent !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mikufy-primary) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--mikufy-primary) 80%, #000) !important;
+}
+
+/* ============================================================
+   3. GOOGLE (google.com)
+   ============================================================ */
+@-moz-document domain("google.com") {
+  /* Search bar */
+  .gLFyf,
+  .SDkEP {
+    border-color: var(--mikufy-primary) !important;
+    border-radius: 24px !important;
+  }
+
+  .gLFyf:focus,
+  .SDkEP:focus-within {
+    box-shadow: 0 0 0 2px var(--mikufy-glow-color) !important;
+  }
+
+  /* Search button */
+  .gNO89b,
+  .T24lMb {
+    background: var(--mikufy-primary) !important;
+    border-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+  }
+
+  .gNO89b:hover {
+    background: color-mix(in srgb, var(--mikufy-primary) 85%, #000) !important;
+  }
+
+  /* Links */
+  a:visited,
+  .q a,
+  .LC20lb {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Google logo tint */
+  #hplogo,
+  .logo {
+    filter: hue-rotate(140deg) saturate(0.8) brightness(1.1) !important;
+  }
+
+  /* Header / toolbar background */
+  #hdr,
+  #sfp,
+  .sfbg {
+    background: var(--mikufy-dark) !important;
+  }
+
+  #hdr .gb_Ac,
+  #hdr .gb_g {
+    color: #fff !important;
+  }
+
+  /* Quick access hover */
+  .MBtdbb:hover .n3sVpb {
+    background: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  }
+}
+
+/* ============================================================
+   4. YOUTUBE (youtube.com)
+   ============================================================ */
+@-moz-document domain("youtube.com") {
+  /* Progress bar */
+  .ytp-progress-bar-container .ytp-progress-bar,
+  .tp-yt-paper-progress#topControl > #progress,
+  .ytp-swatch-background {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  .ytp-play-progress {
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Like button */
+  .like-button-renderer-button yt-icon-fill-24x24,
+  #like-button .yt-spec-button-shape-next--button-text-shape,
+  ytd-toggle-button-renderer#style-default[is-active] .yt-spec-icon-shape {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Subscribe button */
+  #subscribe-button ytd-subscribe-button-renderer button,
+  .yt-spec-button-shape-next--filled.ytd-subscribe-button-renderer {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  #subscribe-button ytd-subscribe-button-renderer[subscribed] button {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Navigation selected tab */
+  .tp-yt-paper-tab.iron-selected .tp-yt-paper-tab-content,
+  ytd-guide-entry-renderer[active] a {
+    color: var(--mikufy-primary) !important;
+  }
+
+  ytd-guide-entry-renderer[active] .tp-yt-paper-ripple {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Thumbnail hover */
+  .ytd-grid-video-renderer:hover #thumbnail,
+  .ytd-rich-item-renderer:hover #thumbnail {
+    border-color: var(--mikufy-primary) !important;
+    border-radius: 12px !important;
+  }
+
+  /* Sidebar dark */
+  #guide,
+  #guide-inner-content,
+  tp-yt-paper-drawer-panel #contentContainer {
+    background: var(--mikufy-dark) !important;
+  }
+
+  /* Video player accent */
+  .ytp-gradient-top,
+  .ytp-gradient-bottom {
+    background: linear-gradient(
+      transparent,
+      rgba(var(--mikufy-primary-rgb), 0.3) !important
+    );
+  }
+}
+
+/* ============================================================
+   5. TWITTER / X (x.com, twitter.com)
+   ============================================================ */
+@-moz-document domain("x.com"),
+       domain("twitter.com") {
+  /* Links */
+  a[href] {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Checkmark / verification */
+  [data-testid="icon-verified"],
+  .css-1q0gn0a {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Tweet / post button */
+  [data-testid="SideNav_NewTweet_Button"],
+  [data-testid="tweetButtonInline"],
+  .css-175oi2r [data-testid="app-bar-transition"] button[role="button"] {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Like heart */
+  [data-testid="like"],
+  [data-testid="unlike"] {
+    color: var(--mikufy-primary) !important;
+  }
+
+  [data-testid="like"] svg,
+  [data-testid="unlike"] svg {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Profile accent */
+  [data-testid="UserProfileHeader_Items"] > span {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Navigation hover */
+  a[href="/home"]:hover,
+  a[href="/explore"]:hover,
+  a[href="/notifications"]:hover,
+  nav[aria-label="Primary"] a:hover {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.1) !important;
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Tweet compose focus */
+  [data-testid="tweetTextarea_0"] {
+    border: 1px solid rgba(var(--mikufy-primary-rgb), 0.3) !important;
+    border-radius: 16px !important;
+  }
+
+  [data-testid="tweetTextarea_0"]:focus-within {
+    border-color: var(--mikufy-primary) !important;
+    box-shadow: 0 0 0 1px var(--mikufy-primary) !important;
+  }
+
+  /* Retweet / reply icons */
+  [data-testid="retweet"],
+  [data-testid="reply"] {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   6. GITHUB (github.com)
+   ============================================================ */
+@-moz-document domain("github.com") {
+  /* Primary buttons */
+  .btn-primary,
+  .btn-primary.btn-outline,
+  .color-fg-primary,
+  .Button--primary {
+    background-color: var(--mikufy-primary) !important;
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  .btn-primary:hover,
+  .Button--primary:hover {
+    background-color: color-mix(in srgb, var(--mikufy-primary) 85%, #000) !important;
+  }
+
+  /* Links */
+  .Link--primary,
+  a.text-emphasis-primary {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Tabs */
+  .UnderlineNav-item.selected .UnderlineNav-octicon {
+    color: var(--mikufy-primary) !important;
+  }
+
+  .UnderlineNav-item.selected {
+    border-bottom-color: var(--mikufy-primary) !important;
+  }
+
+  /* Badges */
+  .Counter,
+  .Label {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Contribution graph */
+  .ContributionCalendar-day[fill] {
+    fill: var(--mikufy-primary) !important;
+  }
+
+  .legend .scale li:nth-child(2) {
+    background: color-mix(in srgb, var(--mikufy-primary) 25%, transparent) !important;
+  }
+
+  .legend .scale li:nth-child(3) {
+    background: color-mix(in srgb, var(--mikufy-primary) 50%, transparent) !important;
+  }
+
+  .legend .scale li:nth-child(4) {
+    background: color-mix(in srgb, var(--mikufy-primary) 75%, transparent) !important;
+  }
+
+  .legend .scale li:nth-child(5) {
+    background: var(--mikufy-primary) !important;
+  }
+
+  /* File navigation active */
+  .js-navigation-item.selected .octicon-file-directory-fill {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Star / Watch / Fork */
+  .btn-with-count .btn,
+  .starring-container .btn,
+  .social-count {
+    color: var(--mikufy-primary) !important;
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  .starring-container .btn[aria-label="Unstar"] {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+  }
+
+  /* PR indicators */
+  .octicon-git-pull-request {
+    color: var(--mikufy-primary) !important;
+  }
+
+  .merge-status-icon .merge-icon-success {
+    background-color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   7. DISCORD (discord.com)
+   ============================================================ */
+@-moz-document domain("discord.com") {
+  /* Buttons */
+  .colorPrimary,
+  [class*="colorBrand"],
+  .button-ejjZVC.lookFilled-1Gx00P.colorBrand-3MkwOQ,
+  button[class*="brand"] {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  .colorPrimary:hover {
+    background-color: color-mix(in srgb, var(--mikufy-primary) 85%, #000) !important;
+  }
+
+  /* Links */
+  a[href*="discord"] {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Mentions */
+  .mention,
+  [class*="mention"] {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Online status */
+  [class*="statusOnline"],
+  [class*="status-2DSuS3"][aria-label="Online"] {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Server icon hover */
+  [class*="listItem"]:hover [class*="pill"] {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Chat input focus */
+  [class*="channelTextArea"] [class*="slateTextArea"],
+  [class*="messageInput-"] {
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Unread indicator */
+  [class*="unreadBadge"],
+  [class*="unreadPill"] {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Nitro / boost */
+  [class*="nitro"],
+  .colorPremium {
+    color: var(--mikufy-primary) !important;
+  }
+
+  [class*="boostBar"] {
+    background-color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   8. REDDIT (reddit.com)
+   ============================================================ */
+@-moz-document domain("reddit.com") {
+  /* Upvote */
+  [aria-label="upvote"],
+  [aria-label="Upvote"] {
+    color: var(--mikufy-primary) !important;
+    fill: var(--mikufy-primary) !important;
+  }
+
+  /* Awards */
+  [class*="award"],
+  [class*=" Award"] {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Join button */
+  [class*="joinButton"],
+  button[data-testid="join-button"],
+  .subscribe-button,
+  [class*="subscribeButton"] {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Community icon border */
+  [class*="CommunityIcon"] {
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Links */
+  a,
+  [data-click-id="comments"],
+  [data-click-id="body"] a {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Comment upvote */
+  [class*="Comment"] [aria-label="upvote"] {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Post card hover */
+  [class*="Post"]:hover,
+  article:hover {
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Tab active */
+  [class*="selected"] {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   9. TIKTOK (tiktok.com)
+   ============================================================ */
+@-moz-document domain("tiktok.com") {
+  /* Heart / like */
+  [data-e2e="like-icon"],
+  [class*="DivLikeActionContainer"] svg,
+  [class*="like-icon"] {
+    color: var(--mikufy-primary) !important;
+    fill: var(--mikufy-primary) !important;
+  }
+
+  /* Follow button */
+  [data-e2e="follow-button"],
+  .follow-button,
+  button[class*="follow"] {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Music note */
+  [class*="music-note"],
+  [class*="MusicNote"] {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Comment icons */
+  [data-e2e="comment-icon"],
+  [class*="DivCommentActionContainer"] svg {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Navigation active */
+  [class*="active"] a,
+  nav a[class*="active"],
+  [class*="NavActive"] {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   10. TWITCH (twitch.tv)
+   ============================================================ */
+@-moz-document domain("twitch.tv") {
+  /* Subscribe / follow */
+  [data-a-target="follow-button"],
+  .follow-button--follow,
+  button[aria-label="Follow"],
+  .follow-card__follow-btn {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Live indicator */
+  [class*="live-indicator"],
+  .live-indicator--live,
+  [class*="LiveIndicator"] {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Chat username colors */
+  .chat-author__display-name {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Navigation active */
+  [class*="top-nav__link--active"],
+  [class*="active"] > a,
+  .top-nav__link--active {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Raid indicator */
+  [class*="raid-indicator"],
+  .raid-notification {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+  }
+
+  /* Player progress */
+  .player-progress-bar {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Bits / cheers */
+  [class*="cheer"] {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   11. SPOTIFY (open.spotify.com)
+   ============================================================ */
+@-moz-document domain("open.spotify.com") {
+  /* Play button */
+  .e-9640-play-button,
+  button[aria-label="Play"],
+  [data-testid="play-button"] {
+    background-color: var(--mikufy-primary) !important;
+    color: #000 !important;
+  }
+
+  .e-9640-play-button:hover {
+    background-color: color-mix(in srgb, var(--mikufy-primary) 85%, #000) !important;
+    transform: scale(1.04);
+  }
+
+  /* Progress bar */
+  .progress-bar__slider,
+  [data-testid="progress-bar"],
+  input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  .progress-bar {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Volume slider */
+  input[data-testid="volume-slider"]::-webkit-slider-thumb {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Like song (heart) */
+  [data-testid="heart-button"],
+  button[aria-label="Save to Your Liked Songs"] svg,
+  .like-button {
+    color: var(--mikufy-primary) !important;
+    fill: var(--mikufy-primary) !important;
+  }
+
+  /* Navigation active */
+  [aria-current="page"],
+  .x-highlight,
+  [class*="active"] {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Artist follow */
+  [data-testid="follow-button"],
+  .follow-button {
+    background-color: var(--mikufy-primary) !important;
+    color: #000 !important;
+  }
+
+  /* Podcast episode indicator */
+  .episode-play-button {
+    background-color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   12. WIKIPEDIA (wikipedia.org)
+   ============================================================ */
+@-moz-document domain("wikipedia.org") {
+  /* Links */
+  a,
+  #mw-content-text a {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Infobox header */
+  .infobox th,
+  .infobox-header {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+  }
+
+  /* Table header */
+  table.wikitable th {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+    color: var(--mikufy-primary) !important;
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Active tab */
+  .vector-tab-active {
+    border-bottom-color: var(--mikufy-primary) !important;
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* References */
+  .reference {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Edit section */
+  .mw-editsection a {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Sidebar categories */
+  .mw-normal-catlinks a {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   13. WHATSAPP (web.whatsapp.com)
+   ============================================================ */
+@-moz-document domain("web.whatsapp.com"),
+       domain("whatsapp.com") {
+  /* Send button */
+  [data-testid="send"],
+  button[aria-label="Send"],
+  .send-message-button {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+  }
+
+  /* Online status */
+  [data-testid="msg-dblcheck"],
+  [data-testid="msg-check"],
+  .message-out .copyable-text::after {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Chat selected */
+  [data-testid="chat-list-item"][aria-selected="true"],
+  .message-in {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.08) !important;
+  }
+
+  /* Sent message bubble */
+  .message-out {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.2) !important;
+  }
+
+  /* Unread badge */
+  [data-testid="icon-unread-count"],
+  .unread-badge {
+    background-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+  }
+
+  /* Voice message */
+  [data-testid="audio-play"],
+  .audio-player-play-button {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Read receipts */
+  .message-out .copyable-text::after {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   14. LINKEDIN (linkedin.com)
+   ============================================================ */
+@-moz-document domain("linkedin.com") {
+  /* Primary buttons */
+  .artdeco-button--primary,
+  .sign-in-card__cta-btn,
+  button[aria-label*="Connect"],
+  button[aria-label*="Follow"] {
+    background-color: var(--mikufy-primary) !important;
+    border-color: var(--mikufy-primary) !important;
+    color: #fff !important;
+  }
+
+  .artdeco-button--primary:hover {
+    background-color: color-mix(in srgb, var(--mikufy-primary) 85%, #000) !important;
+  }
+
+  /* Links */
+  a,
+  .app-aware-link {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Notifications badge */
+  .notification-badge {
+    background-color: var(--mikufy-primary) !important;
+  }
+
+  /* Profile badge */
+  .profile-badge {
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Connection indicator */
+  .entity-result__badge {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Job alert */
+  .job-alert {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Post engagement */
+  .social-actions-button,
+  .feed-shared-social-actions button {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   15. CHATGPT (chatgpt.com)
+   ============================================================ */
+@-moz-document domain("chatgpt.com"),
+       domain("chat.openai.com") {
+  /* Send button */
+  button[data-testid="send-button"],
+  .send-button {
+    background-color: var(--mikufy-primary) !important;
+    color: #000 !important;
+  }
+
+  button[data-testid="send-button"]:disabled {
+    opacity: 0.4 !important;
+  }
+
+  /* Input focus */
+  #prompt-textarea,
+  textarea {
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  #prompt-textarea:focus,
+  textarea:focus {
+    box-shadow: 0 0 0 2px var(--mikufy-glow-color) !important;
+    border-color: var(--mikufy-primary) !important;
+  }
+
+  /* Conversation active */
+  .group conversation-item--active {
+    border-left: 3px solid var(--mikufy-primary) !important;
+  }
+
+  /* Code block copy */
+  .code-block-header button,
+  .copy-button {
+    color: var(--mikufy-primary) !important;
+  }
+
+  .code-block-header button:hover,
+  .copy-button:hover {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  }
+
+  /* Model selector */
+  .model-switcher .active,
+  [data-testid="model-switcher"] button[aria-selected="true"] {
+    color: var(--mikufy-primary) !important;
+    border-bottom-color: var(--mikufy-primary) !important;
+  }
+
+  /* Streaming indicator */
+  .streaming-indicator,
+  .result-streaming .cursor-blink {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Navigation sidebar */
+  .nav-item:hover,
+  .nav-item.active {
+    background-color: rgba(var(--mikufy-primary-rgb), 0.1) !important;
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Links in response */
+  .markdown a,
+  .prose a {
+    color: var(--mikufy-primary) !important;
+  }
+}
+
+/* ============================================================
+   16. NEW TAB PAGE (about:newtab, about:home)
+   ============================================================ */
+@-moz-document regexp("about:(newtab|home)") {
+  body,
+  html {
+    background: linear-gradient(135deg, var(--mikufy-dark) 0%, #0F2847 50%, #122E4A 100%) !important;
+  }
+
+  /* Top sites cards */
+  .top-sites-outer {
+    --newtab-site-icon-border-radius: 12px !important;
+  }
+
+  .top-sites-card,
+  .top-site-item {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .top-sites-card:hover,
+  .top-site-item:hover {
+    border-color: var(--mikufy-primary) !important;
+    box-shadow: 0 4px 20px var(--mikufy-glow-color) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  /* Search bar */
+  .search-input input:focus,
+  #newtab-search-text:focus,
+  .search-bar input:focus {
+    border-color: var(--mikufy-primary) !important;
+    box-shadow: 0 0 12px var(--mikufy-glow-color) !important;
+  }
+
+  .search-input input,
+  #newtab-search-text,
+  .search-bar input {
+    border-radius: 24px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+  }
+
+  /* Section headers */
+  .section-heading,
+  .top-sites-header,
+  .message-header h3,
+  #newtab-vertical-margin-top-section-title {
+    color: var(--mikufy-primary) !important;
+  }
+
+  /* Pinned sites / shortcuts */
+  .shortcut {
+    background: rgba(var(--mikufy-primary-rgb), 0.08) !important;
+    border: 1px solid rgba(var(--mikufy-primary-rgb), 0.2) !important;
+    border-radius: 10px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .shortcut:hover {
+    background: rgba(var(--mikufy-primary-rgb), 0.18) !important;
+    border-color: var(--mikufy-primary) !important;
+    box-shadow: 0 2px 12px var(--mikufy-glow-color) !important;
+  }
+
+  .shortcut-label {
+    color: #fff !important;
+  }
+
+  /* Text elements */
+  body {
+    color: #e0e0e0 !important;
+  }
+}
+
+/* ============================================================
+   END OF Mikufy userContent.css
+   ============================================================ */

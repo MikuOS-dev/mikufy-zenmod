@@ -1,0 +1,704 @@
+/* ============================================================
+ * Mikufy - Zen Browser Theme
+ * A Hatsune Miku-inspired CSS theme for Zen Browser
+ * Primary: #39C5BB | Secondary: #E83F6F
+ * ============================================================ */
+
+/* ============================================================
+ * 1. CSS VARIABLES
+ * ============================================================ */
+:root {
+  --mikufy-primary: #39C5BB;
+  --mikufy-primary-rgb: 57, 197, 187;
+  --mikufy-secondary: #E83F6F;
+  --mikufy-secondary-rgb: 232, 63, 111;
+  --mikufy-dark: #0A1628;
+  --mikufy-glow-color: rgba(57, 197, 187, 0.4);
+  --mikufy-glow-color-secondary: rgba(232, 63, 111, 0.3);
+  --mikufy-glow-spread: 20px;
+  --mikufy-blur-amount: 12px;
+  --mikufy-transition-fast: 0.2s ease;
+  --mikufy-transition-smooth: 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.35);
+}
+
+/* ============================================================
+ * 2. BROWSER BACKGROUND
+ * ============================================================ */
+#zen-browser-background {
+  background: linear-gradient(135deg, #0A1628 0%, #0D1F3C 50%, #0A1628 100%) !important;
+}
+
+#zen-browser-background::after {
+  background: linear-gradient(135deg, #0A1628 0%, #0D1F3C 50%, #0A1628 100%) !important;
+}
+
+/* ============================================================
+ * 3. SIDEBAR / TABS (Vertical Tab Bar)
+ * ============================================================ */
+
+/* --- Tab container --- */
+#tabbrowser-tabs {
+  --tabselected-color: rgba(var(--mikufy-primary-rgb), 0.15);
+}
+
+/* --- Individual tabs --- */
+.tabbrowser-tab {
+  transition: background-color var(--mikufy-transition-fast),
+              border-color var(--mikufy-transition-fast),
+              box-shadow var(--mikufy-transition-fast);
+}
+
+.tab-stack {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab-background {
+  background: rgba(var(--mikufy-primary-rgb), 0.05) !important;
+  border-radius: 8px !important;
+  border-left: 3px solid transparent !important;
+  transition: background-color var(--mikufy-transition-fast),
+              border-color var(--mikufy-transition-fast);
+}
+
+/* Selected tab */
+.tabbrowser-tab[visuallyselected="true"] .tab-background {
+  background: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  border-left-color: var(--mikufy-primary) !important;
+}
+
+/* Hovered tab */
+.tabbrowser-tab:hover > .tab-stack > .tab-background {
+  background: rgba(var(--mikufy-primary-rgb), 0.08) !important;
+}
+
+/* Tab text */
+.tab-label {
+  color: light-dark(#e0e0e0, #e0e0e0) !important;
+}
+
+.tabbrowser-tab:hover .tab-label {
+  color: #ffffff !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-label {
+  color: var(--mikufy-primary) !important;
+}
+
+/* Tab icons */
+.tab-icon-image {
+  opacity: 0.85;
+}
+
+.tabbrowser-tab:hover .tab-icon-image {
+  opacity: 1;
+}
+
+.tabbrowser-tab[selected="true"] .tab-icon-image {
+  opacity: 1;
+}
+
+/* Tab close / mute overlay buttons */
+.tab-icon-overlay {
+  color: var(--mikufy-primary) !important;
+  border-radius: 50% !important;
+  transition: background-color var(--mikufy-transition-fast),
+              color var(--mikufy-transition-fast);
+}
+
+.tab-icon-overlay:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* Pinned tabs */
+.tabbrowser-tab[pinned] .tab-background {
+  background: rgba(var(--mikufy-primary-rgb), 0.03) !important;
+  border-left: none !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+.tabbrowser-tab[pinned][visuallyselected="true"] .tab-background {
+  border-bottom-color: var(--mikufy-primary) !important;
+}
+
+/* Tab group labels */
+.tab-group-label {
+  color: var(--mikufy-primary) !important;
+  font-weight: 600;
+}
+
+/* New tab button */
+#tabs-newtab-button {
+  color: var(--mikufy-primary) !important;
+  border-radius: 8px !important;
+  transition: background-color var(--mikufy-transition-fast),
+              color var(--mikufy-transition-fast);
+}
+
+#tabs-newtab-button:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* Essential tabs */
+#zen-essentials .tab-background {
+  background: rgba(var(--mikufy-primary-rgb), 0.04) !important;
+}
+
+#zen-essentials .tabbrowser-tab[visuallyselected="true"] .tab-background {
+  background: rgba(var(--mikufy-primary-rgb), 0.12) !important;
+}
+
+/* ============================================================
+ * 4. URL BAR
+ * ============================================================ */
+#urlbar-background {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.05) !important;
+  border: 1px solid rgba(var(--mikufy-primary-rgb), 0.1) !important;
+  border-radius: 16px !important;
+  transition: background-color var(--mikufy-transition-fast),
+              border-color var(--mikufy-transition-fast),
+              box-shadow var(--mikufy-transition-fast),
+              backdrop-filter var(--mikufy-transition-fast);
+}
+
+#urlbar[focused="true"] > #urlbar-background {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.1) !important;
+  border-color: var(--mikufy-primary) !important;
+  box-shadow: 0 0 var(--mikufy-glow-spread) var(--mikufy-glow-color) !important;
+}
+
+#urlbar-input-container {
+  color: #e0e0e0 !important;
+}
+
+#urlbar-input {
+  color: #e0e0e0 !important;
+}
+
+#urlbar-input::placeholder {
+  color: rgba(224, 224, 224, 0.5) !important;
+}
+
+/* ============================================================
+ * 5. TOOLBAR
+ * ============================================================ */
+#navigator-toolbox {
+  background-color: transparent !important;
+}
+
+#PersonalToolbar {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.03) !important;
+  border-top: 1px solid rgba(var(--mikufy-primary-rgb), 0.08) !important;
+}
+
+.toolbar-items {
+  color: #e0e0e0 !important;
+}
+
+/* Bookmark bar items */
+toolbarbutton.bookmark-item {
+  color: #d0d0d0 !important;
+  border-radius: 6px !important;
+  transition: background-color var(--mikufy-transition-fast),
+              color var(--mikufy-transition-fast);
+}
+
+toolbarbutton.bookmark-item:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.12) !important;
+  color: var(--mikufy-primary) !important;
+}
+
+/* Toolbar separator */
+toolbarseparator {
+  border-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+}
+
+/* Navigation buttons */
+#back-button,
+#forward-button,
+#stop-reload-button {
+  color: #d0d0d0 !important;
+  transition: color var(--mikufy-transition-fast),
+              background-color var(--mikufy-transition-fast);
+}
+
+#back-button:hover,
+#forward-button:hover,
+#stop-reload-button:hover {
+  color: var(--mikufy-primary) !important;
+  background-color: rgba(var(--mikufy-primary-rgb), 0.1) !important;
+}
+
+/* ============================================================
+ * 6. MENUS AND POPUPS
+ * ============================================================ */
+menupopup {
+  background-color: rgba(10, 22, 40, 0.95) !important;
+  border: 1px solid rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  border-radius: 10px !important;
+  color: #e0e0e0 !important;
+  padding: 4px !important;
+}
+
+menupopup > menuitem,
+menupopup > menu {
+  color: #e0e0e0 !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+  transition: background-color var(--mikufy-transition-fast);
+}
+
+menupopup > menuitem:hover,
+menupopup > menu:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  color: var(--mikufy-primary) !important;
+}
+
+menupopup > menuitem:active {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.25) !important;
+}
+
+menupopup > menuseparator {
+  border-color: rgba(var(--mikufy-primary-rgb), 0.12) !important;
+  margin: 4px 6px !important;
+}
+
+/* Popup notifications */
+.popup-notification-body {
+  background-color: rgba(10, 22, 40, 0.92) !important;
+  border: 1px solid rgba(var(--mikufy-primary-rgb), 0.2) !important;
+  border-radius: 12px !important;
+  color: #e0e0e0 !important;
+  padding: 16px !important;
+}
+
+.popup-notification-body::before {
+  border-top-color: var(--mikufy-primary) !important;
+}
+
+.popup-notification-button-container button {
+  border-radius: 8px !important;
+}
+
+.popup-notification-primary-button {
+  background-color: var(--mikufy-primary) !important;
+  color: var(--mikufy-dark) !important;
+}
+
+.popup-notification-primary-button:hover {
+  background-color: color-mix(in srgb, var(--mikufy-primary), white 15%) !important;
+}
+
+/* Panels */
+panel,
+.panel-arrowcontent {
+  background-color: rgba(10, 22, 40, 0.95) !important;
+  border: 1px solid rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  border-radius: 10px !important;
+  color: #e0e0e0 !important;
+}
+
+.panel-arrowcontent {
+  border-radius: 10px !important;
+}
+
+/* Panel subview buttons */
+.subviewbutton,
+toolbarbutton.subviewbutton {
+  color: #e0e0e0 !important;
+  border-radius: 6px !important;
+  transition: background-color var(--mikufy-transition-fast);
+}
+
+.subviewbutton:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.12) !important;
+  color: var(--mikufy-primary) !important;
+}
+
+/* ============================================================
+ * 7. SCROLLBAR STYLING
+ * ============================================================ */
+
+/* Thin scrollbar */
+@media -moz-pref("mikufy.scrollbar-style", "thin") {
+  * {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(var(--mikufy-primary-rgb), 0.35) transparent !important;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(var(--mikufy-primary-rgb), 0.35) !important;
+    border-radius: 3px !important;
+    border: none !important;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--mikufy-primary-rgb), 0.6) !important;
+  }
+}
+
+/* Hidden scrollbar */
+@media -moz-pref("mikufy.scrollbar-style", "hidden") {
+  * {
+    scrollbar-width: none !important;
+  }
+
+  *::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+ * 8. SELECTION AND FOCUS
+ * ============================================================ */
+::selection {
+  background-color: var(--mikufy-primary) !important;
+  color: #ffffff !important;
+}
+
+::-moz-selection {
+  background-color: var(--mikufy-primary) !important;
+  color: #ffffff !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--mikufy-primary) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px var(--mikufy-glow-color) !important;
+}
+
+/* Toolbar button focus rings */
+toolbarbutton:focus-visible {
+  outline: 2px solid var(--mikufy-primary) !important;
+  outline-offset: 1px !important;
+  box-shadow: 0 0 0 2px var(--mikufy-glow-color) !important;
+}
+
+/* Input focus */
+input:focus-visible,
+textbox:focus-visible {
+  outline: 2px solid var(--mikufy-primary) !important;
+  outline-offset: 1px !important;
+  box-shadow: 0 0 0 2px var(--mikufy-glow-color) !important;
+}
+
+/* ============================================================
+ * 9. WORKSPACES
+ * ============================================================ */
+#zen-workspaces-button {
+  color: #d0d0d0 !important;
+  transition: color var(--mikufy-transition-fast),
+              background-color var(--mikufy-transition-fast),
+              transform var(--mikufy-transition-fast);
+}
+
+#zen-workspaces-button:hover {
+  color: var(--mikufy-primary) !important;
+  background-color: rgba(var(--mikufy-primary-rgb), 0.1) !important;
+  transform: scale(1.05);
+}
+
+#zen-workspaces-button[subviewbuttonopen="true"],
+#zen-workspaces-button[open="true"] {
+  color: var(--mikufy-primary) !important;
+  background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+}
+
+/* Workspace indicator */
+#zen-workspaces-button .workspace-indicator {
+  background-color: var(--mikufy-primary) !important;
+}
+
+/* Workspace items in the subview */
+#zen-workspaces-panel .subviewbutton[workspace-active="true"] {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.15) !important;
+  color: var(--mikufy-primary) !important;
+}
+
+#zen-workspaces-panel .subviewbutton[workspace-active="true"]::before {
+  background-color: var(--mikufy-primary) !important;
+}
+
+#zen-workspaces-panel .subviewbutton:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.08) !important;
+}
+
+/* ============================================================
+ * 10. SPLIT VIEW
+ * ============================================================ */
+[zen-split="true"] {
+  border: 1px solid rgba(var(--mikufy-primary-rgb), 0.2) !important;
+  border-radius: 8px !important;
+}
+
+.browserSidebarContainer[zen-split="true"] {
+  border: 1px solid rgba(var(--mikufy-primary-rgb), 0.15) !important;
+}
+
+/* Active split panel indicator */
+[zen-split="true"] .zen-split-active-panel {
+  border-bottom: 2px solid var(--mikufy-primary) !important;
+}
+
+/* ============================================================
+ * 11. GLANCE
+ * ============================================================ */
+.zen-glance-sidebar-container {
+  background-color: rgba(10, 22, 40, 0.6) !important;
+}
+
+.zen-glance-sidebar-container toolbarbutton {
+  color: #d0d0d0 !important;
+  border-radius: 6px !important;
+  transition: background-color var(--mikufy-transition-fast),
+              color var(--mikufy-transition-fast);
+}
+
+.zen-glance-sidebar-container toolbarbutton:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.12) !important;
+  color: var(--mikufy-primary) !important;
+}
+
+/* Glance close button */
+.zen-glance-sidebar-container .close-button {
+  color: var(--mikufy-primary) !important;
+}
+
+.zen-glance-sidebar-container .close-button:hover {
+  background-color: rgba(var(--mikufy-primary-rgb), 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* ============================================================
+ * 12. ANIMATIONS
+ * ============================================================ */
+@media -moz-pref("mikufy.animations") {
+  @keyframes mikufy-glow-pulse {
+    0%   { box-shadow: 0 0 5px var(--mikufy-glow-color); }
+    50%  { box-shadow: 0 0 var(--mikufy-glow-spread) var(--mikufy-glow-color); }
+    100% { box-shadow: 0 0 5px var(--mikufy-glow-color); }
+  }
+
+  @keyframes mikufy-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes mikufy-slide-in {
+    from { transform: translateX(-10px); opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+  }
+
+  @keyframes mikufy-tab-select {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  /* Tab hover animation */
+  .tabbrowser-tab > .tab-stack {
+    transition: transform var(--mikufy-transition-fast);
+  }
+
+  .tabbrowser-tab:hover > .tab-stack {
+    transform: translateX(2px);
+  }
+
+  /* Tab select animation */
+  .tabbrowser-tab[visuallyselected="true"] > .tab-stack {
+    animation: mikufy-tab-select 0.3s ease;
+  }
+
+  /* URL bar dropdown fade-in */
+  #urlbar[open="true"] > .urlbar-input-container ~ .urlbar-results-container {
+    animation: mikufy-fade-in 0.2s ease;
+  }
+
+  /* Menu open animation */
+  menupopup[open="true"] {
+    animation: mikufy-slide-in 0.2s ease;
+  }
+
+  /* Workspace switch indicator pulse */
+  #zen-workspaces-button[open="true"] .workspace-indicator {
+    animation: mikufy-glow-pulse 1.5s ease-in-out infinite;
+  }
+
+  /* Popup notification entry */
+  .popup-notification-body[open] {
+    animation: mikufy-fade-in 0.25s ease;
+  }
+}
+
+/* ============================================================
+ * 13. GLOW EFFECTS
+ * ============================================================ */
+@media -moz-pref("mikufy.glow") {
+  /* Sidebar glow */
+  #sidebar-box {
+    box-shadow: 2px 0 15px rgba(var(--mikufy-primary-rgb), 0.08) !important;
+  }
+
+  /* URL bar glow on focus */
+  #urlbar[focused="true"] > #urlbar-background {
+    box-shadow: 0 0 var(--mikufy-glow-spread) var(--mikufy-glow-color) !important;
+  }
+
+  /* Active tab glow */
+  .tabbrowser-tab[visuallyselected="true"] .tab-background {
+    box-shadow: 0 0 10px rgba(var(--mikufy-primary-rgb), 0.12) !important;
+  }
+
+  /* Menu glow */
+  menupopup[open="true"],
+  panel[open="true"] {
+    box-shadow: 0 0 20px rgba(var(--mikufy-primary-rgb), 0.1) !important;
+  }
+
+  /* Workspace indicator glow */
+  #zen-workspaces-button .workspace-indicator {
+    box-shadow: 0 0 8px rgba(var(--mikufy-primary-rgb), 0.4) !important;
+  }
+
+  /* Tab hover glow */
+  @media -moz-pref("mikufy.tab-hover-glow") {
+    .tabbrowser-tab:hover .tab-background {
+      box-shadow: 0 0 12px rgba(var(--mikufy-primary-rgb), 0.15) !important;
+    }
+  }
+
+  /* URL bar specific glow pref */
+  @media -moz-pref("mikufy.urlbar-glow") {
+    #urlbar[focused="true"] > #urlbar-background {
+      box-shadow: 0 0 25px rgba(var(--mikufy-primary-rgb), 0.35),
+                  0 0 50px rgba(var(--mikufy-primary-rgb), 0.15) !important;
+    }
+  }
+}
+
+/* ============================================================
+ * 14. BLUR EFFECTS
+ * ============================================================ */
+@media -moz-pref("mikufy.blur") {
+  /* URL bar background blur */
+  #urlbar[focused="true"] > #urlbar-background {
+    backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+    -moz-backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+  }
+
+  /* Menu blur */
+  menupopup {
+    backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+    -moz-backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+  }
+
+  /* Sidebar blur */
+  @media -moz-pref("mikufy.sidebar-transparency") {
+    #sidebar-box {
+      backdrop-filter: blur(8px) !important;
+      -moz-backdrop-filter: blur(8px) !important;
+    }
+  }
+
+  /* Panel / popup blur */
+  panel,
+  .panel-arrowcontent {
+    backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+    -moz-backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+  }
+
+  /* Toolbar blur */
+  #navigator-toolbox {
+    backdrop-filter: blur(6px) !important;
+    -moz-backdrop-filter: blur(6px) !important;
+  }
+
+  /* Popup notification blur */
+  .popup-notification-body {
+    backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+    -moz-backdrop-filter: blur(var(--mikufy-blur-amount)) !important;
+  }
+}
+
+/* ============================================================
+ * 15. COMPACT TABS
+ * ============================================================ */
+@media -moz-pref("mikufy.compact-tabs") {
+  .tabbrowser-tab {
+    padding-block: 2px !important;
+  }
+
+  .tab-background {
+    padding-block: 1px !important;
+  }
+
+  .tab-label {
+    font-size: 0.85em !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .tab-icon-image {
+    margin-block: 0 !important;
+  }
+
+  .tab-stack {
+    padding-block: 0 !important;
+  }
+
+  .tabbrowser-tab[pinned] .tab-icon-image {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  #tabs-newtab-button {
+    padding-block: 2px !important;
+  }
+}
+
+/* ============================================================
+ * 16. RESPONSIVE AND ACCESSIBILITY
+ * ============================================================ */
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .tabbrowser-tab:hover > .tab-stack {
+    transform: none !important;
+  }
+
+  #zen-workspaces-button:hover {
+    transform: none !important;
+  }
+}
+
+/* Ensure sufficient contrast on themed elements */
+.tab-label,
+.tab-icon-overlay,
+#urlbar-input,
+toolbarbutton.bookmark-item,
+menupopup > menuitem,
+menupopup > menu,
+.subviewbutton,
+.popup-notification-body {
+  color-scheme: dark;
+}

@@ -1,0 +1,58 @@
+🎵 MIKUFY MODPACK — Full List
+
+Mods installed via chrome/ folder (Mikufy ZenMod):
+  ✔ userChrome.css — browser UI theme (sidebar, tabs)
+  ✔ userContent.css — boosts for 16 websites
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 RECOMMENDED MODS (install from zen-browser.app/mods)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ESSENTIALS
+
+Transparent Zen
+Transparent tabs with smooth animations
+https://zen-browser.app/mods/642854b5-88b4-4c40-b256-e035532109df
+
+SuperPins
+Enhanced pinned tabs (dim, gap, background)
+https://zen-browser.app/mods/ad97bb70-0066-4e42-9b5f-173a5e42c6fc
+
+Better Find Bar
+Find bar (Ctrl+F) moves to the top
+https://zen-browser.app/mods/a6335949-4465-4b71-926c-4a52d34bc9c0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VISUALS
+
+Better Unloaded Tabs
+Unloaded tabs become grayscale + transparent
+https://zen-browser.app/mods/f7c71d9a-bce2-420f-ae44-a64bd92975ab
+
+Floating Status Bar
+Floating status bar at the corner
+https://zen-browser.app/mods/906c6915-5677-48ff-9bfc-096a02a72379
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FUNCTIONAL
+
+Better CtrlTab Panel
+Improved Ctrl+Tab switcher panel
+https://zen-browser.app/mods/72f8f48d-86b9-4487-acea-eb4977b18f21
+
+Right Side Glance Buttons
+Move Glance buttons to the right side
+https://zen-browser.app/mods/20e8cc78-3dac-4db0-81a4-814672fb50af
+
+Tab Title Fix
+Larger and more readable tab titles
+https://zen-browser.app/mods/7190e4e9-bead-4b40-8f57-95d852ddc941
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIP: Install "Transparent Zen" first — it pairs
+perfectly with Mikufy's glow effects.
