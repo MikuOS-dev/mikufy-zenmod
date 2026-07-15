@@ -56,3 +56,41 @@ https://zen-browser.app/mods/7190e4e9-bead-4b40-8f57-95d852ddc941
 
 TIP: Install "Transparent Zen" first — it pairs
 perfectly with Mikufy's glow effects.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ RECOMMENDED ZEN SETTINGS
+
+Appearance (Settings → Look and Feel)
+  Theme: Dark
+  Compact Mode: Enabled
+  Sidebar Transparency: On (in Mikufy ZenMod panel)
+
+Tabs (Settings → Tab Management)
+  Vertical Tabs: On (Zen default)
+  Tab Width: 250-280px
+  Essentials: On (pins important tabs at top)
+
+about:config tweaks
+  zen.sidebar.enabled → true
+  zen.sidebar.position → left
+  zen.sidebar.width → 280
+  zen.compact.mode.enabled → true
+  zen.theme.transparency → true
+  zen.urlbar.expandOnFocus → true
+
+Mikufy ZenMod Preferences (Settings → Zen Mods)
+  Glow Effect: On
+  Blur: On
+  Animations: On
+  Transparent Sidebar: On
+  Scrollbar: Thin
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 RECOMMENDED EXTENSIONS (about:addons)
+
+uBlock Origin — Ad blocker
+Dark Reader — Dark mode for websites
+Bitwarden — Password manager
+Vimium — Keyboard navigation
