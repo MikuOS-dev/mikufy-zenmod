@@ -91,6 +91,5 @@ Mikufy ZenMod Preferences (Settings → Zen Mods)
 🔧 RECOMMENDED EXTENSIONS (about:addons)
 
 uBlock Origin — Ad blocker
-Dark Reader — Dark mode for websites
 Bitwarden — Password manager
 Vimium — Keyboard navigation
