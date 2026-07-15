@@ -16,26 +16,38 @@ Transparent Zen
 Transparent tabs with smooth animations
 https://zen-browser.app/mods/642854b5-88b4-4c40-b256-e035532109df
   Settings:
-    Tab Transparency: 0.6
-    Animation Speed: Normal
-    Enable Smooth Animations: On
-    Enable Blur Effects: On
+    Allow zen browser to be transparent: On
+    Enable Linux transparency (if on Linux): On
 
 SuperPins
-Enhanced pinned tabs (dim, gap, background)
+Enhanced pinned tabs and Essentials
 https://zen-browser.app/mods/ad97bb70-0066-4e42-9b5f-173a5e42c6fc
   Settings:
-    Dim Unloaded Pins: On
-    Pin Tab Background: On
-    Border Around Pins: Off
-    Gap Between Pins: 4px
+    Essentials Width: Normal
+    Essentials Gap: Normal
+    Essentials Position: Top
+    Essentials Color Scheme: Transparent Background
+    Essentials Auto Grow: On
+    Essentials Transition BG: On
+    Essentials Transition Speed: 100ms
+    Pinned BG: On
+    Pinned Transition BG: On
+    Pinned Transition Speed: 100ms
+    Pinned Height: Normal
+    Favicon Size: Normal
+    Dim Type: Both (Icons + Text)
+    Show Separator: When there are Essentials and/or pinned tabs
+    Restore Pinned Tabs On Demand: On
 
 Better Find Bar
-Find bar (Ctrl+F) moves to the top
+Floating find bar with theme match and customization
 https://zen-browser.app/mods/a6335949-4465-4b71-926c-4a52d34bc9c0
   Settings:
-    Position: Top
-    Compact Mode: On
+    Transparent Background: On
+    Horizontal Position: Center
+    Vertical Position: Top
+    Textbox Width: 800
+    Instant Animations: On
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -44,18 +56,12 @@ VISUALS
 Better Unloaded Tabs
 Unloaded tabs become grayscale + transparent
 https://zen-browser.app/mods/f7c71d9a-bce2-420f-ae44-a64bd92975ab
-  Settings:
-    Grayscale Amount: 100%
-    Opacity: 0.5
-    Enable Hover Effect: On
+  No configurable settings.
 
 Floating Status Bar
 Floating status bar at the corner
 https://zen-browser.app/mods/906c6915-5677-48ff-9bfc-096a02a72379
-  Settings:
-    Position: Bottom Right
-    Auto Hide: On
-    Show On Hover: On
+  No configurable settings.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -65,24 +71,26 @@ Better CtrlTab Panel
 Improved Ctrl+Tab switcher panel
 https://zen-browser.app/mods/72f8f48d-86b9-4487-acea-eb4977b18f21
   Settings:
-    Panel Zoom: 1.0
-    Show Tab Preview: On
-    Enable Smooth Switch: On
+    Corners Roundness: 40px
+    Panel Padding: 25px
+    Panel Shadow Size: 15px
+    Panel Border Width: 0px
+    Panel Max Width: 2000px
+    Item Font Size: 13px
+    Item Favicon Size: 36px
+    Item Favicon Padding: 2px
 
 Right Side Glance Buttons
 Move Glance buttons to the right side
 https://zen-browser.app/mods/20e8cc78-3dac-4db0-81a4-814672fb50af
-  Settings:
-    Position: Right
-    Offset: 10px
+  No configurable settings.
 
 Tab Title Fix
 Larger and more readable tab titles
 https://zen-browser.app/mods/7190e4e9-bead-4b40-8f57-95d852ddc941
   Settings:
-    Font Size: 13px
-    Font Weight: 500
-    Show Pending Style: Bold
+    Tab Name Font Size: 13px
+    Pending Tab Opacity: 0.55
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
